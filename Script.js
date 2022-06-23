@@ -19,6 +19,9 @@ function guardar(){
 
 function mostrar() {
 
+    if (codigo.length == 0) {
+        location.href = "index.html";
+    }
     var mostrar = "";
 
     mostrar += '<thead>';
@@ -28,8 +31,11 @@ function mostrar() {
     mostrar += '<th>'+'<label>Cantidad</label>'+'</th>';
     mostrar += '<th>'+'<label>Precio</label>'+'</th>';
     mostrar += '<th>'+'<label>Revisar</label>'+'</th>';
+    mostrar += '<th>'+'<label>Eliminar</label>'+'</th>';
     mostrar += '</tr>';
     mostrar += '</thead>';
+
+    
 
     for (let i = 0; i < codigo.length; i++) {
         
@@ -39,6 +45,7 @@ function mostrar() {
         mostrar += '<td>'+cantidad[i]+'</td>';
         mostrar += '<td>'+precio[i]+'</td>';
         mostrar += '<td>'+'<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"onClick="modal('+codigo[i]+')"><i class="fa-brands fa-searchengin"></i></button>'+'</td>';
+        mostrar += '<td>'+'<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="fa-brands fa-searchengin"></i></button>'+'</td>';
         mostrar += '</tr>';
         
         document.getElementById("table1").innerHTML=mostrar;
@@ -70,6 +77,20 @@ function cargar(Cod){
     precio[index] = (document.getElementById("input_precio")).value;
 
     mostrar();
+}
+
+function onDelete(Cod) {
+
+    let index = codigo.indexOf(Cod);
+    console.log(index);
+    codigo.splice(index, 1);
+    nombre.splice(index, 1);
+    cantidad.splice(index, 1);
+    precio.splice(index, 1);
+
+    mostrar();
+    
+        
 }
 
 
