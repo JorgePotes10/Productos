@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(153, 233, 230);
+    
+}
+#form{
+    margin: 15%;   
+}
+
+#bordes-form{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 0;
+    background-color: rgb(157, 206, 249);
+    font-weight: 900;
+    
+    
+}
+#form H3{
+    text-align: center;
+    font: bold;
+    
+}
+
+form .btn-1{
+    display: flex;
+    justify-content: center;
+    border:none;
+}
+form .lab-inp{
+    display:flex;
+    justify-content: space-between;
+}
+.form-control{
+    width: 75%;
+    height: 10%;
+}
+#table1{
+    text-align: center;
+    background-color: rgba(80, 205, 255, 0.822);  
+}
+thead tr button{
+    border-radius: 7px;
+    background-color: rgb(238, 255, 0);
+    padding: 6px;
+}
+
+@media (min-width:1024px) {
+    #form{
+        margin-left: 7%;   
+    }
+    .form-control{
+        width: 60%;
+        height: 10%;
+    }
+}
