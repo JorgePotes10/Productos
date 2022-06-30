@@ -82,7 +82,6 @@ function cargar(Cod){
 function onDelete(Cod) {
 
     let index = codigo.indexOf(Cod);
-    console.log(index);
     codigo.splice(index, 1);
     nombre.splice(index, 1);
     cantidad.splice(index, 1);
